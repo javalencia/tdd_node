@@ -1,6 +1,8 @@
+import { HttpRequest, HttpResponse } from '../interfaces/http-interface'
+
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 export class RegisterVehicle {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttpRequest): HttpResponse | undefined {
     if (!httpRequest.body.name) {
       return {
         statusCode: 400,
